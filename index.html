@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<!-- 스타벅스 예제 myself -->
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta item__name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>starbucks</title>
+
+  <!-- 파비콘 설정 -->
+  <link rel="icon" href="./favicon.png" />
+
+  <!-- 브라우저 스타일 초기화 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+  <!-- Google Fonts 연결 -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Material Icons 연결 -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+  <!-- CSS 연결 -->
+  <link rel="stylesheet" href="./main.css" />
+
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollToPlugin.min.js" integrity="sha512-kSI9CgGh60rJbNVeMJvfNX0UTKAq8LEOea/yKJQbFpIroxT7bf9/zUFXbnfsQP5F6xlOOHtCfBPgsE1ceiHnRw==" crossorigin="anonymous"></script>
+  
+  <!-- LODASH(throttle 사용을 위해) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" integrity="sha512-WFN04846sdKMIP5LKNphMaWzU7YpMyCU245etK3g/2ARYbPK9Ub18eG+ljU96qKRCWh+quCY7yefSmlkQw1ANQ==" crossorigin="anonymous"></script>
+
+  <!-- SWIPER -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- JS 연결 -->
+  <script defer src="./js/main.js"></script>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header>
+    <div class="inner">
+
+      <!-- 로고  -->
+      <a href="javascript:void(0)" class="logo">
+        <img src="./images/starbucks_logo.png" alt="a" />
+      </a>
+
+      <!-- 상단 서브 메뉴 -->
+      <div class="sub-menu">
+        <ul class="menu">
+          <li>
+            <a href="javascript:void(0)">Sign In</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">My Starbucks</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Customer Service & Ideas</a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">Find a Store</a>
+          </li>
+        </ul>
+        <!-- 상단 검색창 -->
+        <div class="search">
+          <input type="text" />
+          <span class="material-icons">search</span>
+        </div>
+      </div>
+
+      <!-- 하단 메인 메뉴 -->
+      <ul class="main-menu">
+        <li class="item">
+          <div class="item__name">COFFEE</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">MENU</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">STORE</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">RESPONSIBILITY</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">MY STARBUCKS REWARDS</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="item">
+          <div class="item__name">WHAT'S NEW</div>
+          <div class="item__contents">
+            <div class="contents__menu">
+              <ul class="inner">
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaaaaaaa</li>
+                    <li>aaaaaaaa</li>
+                  </ul>
+                </li>
+                <li>
+                  <h4>커피</h4>
+                  <ul>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                    <li>aaa</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="contents__texture">
+              <div class="inner">
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+                <h4>나와 어울리는 커피 찾기</h4>
+                <p>어쩌구 저쩌구 가나다라 마바사</p>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+
+    <!-- 뱃지 -->
+    <div class="badges">
+      <div class="badge">
+        <img src="./images/badge1.jpg" alt="a" />
+      </div>
+      <div class="badge">
+        <img src="./images/badge2.jpg" alt="a" />
+      </div>
+    </div>
+  </header>
+
+  <!-- VISUAL -->
+  <section class="visual">
+    <div class="inner">
+      <div class="title fade-in">
+        <img src="./images/visual_title.png" alt="a" />
+        <a href="javascript:void(0)" class="btn btn--brown">자세히 보기</a>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup1.png" alt="a" class="cup1 image" />
+        <img src="./images/visual_cup1_text.png" alt="a" class="cup1 text"/>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_cup2.png" alt="a" class="cup2 image" />
+        <img src="./images/visual_cup2_text.png" alt="a" class="cup2 text"/>
+      </div>
+      <div class="fade-in">
+        <img src="./images/visual_spoon.png" alt="a" class="spoon" />
+      </div>
+    </div>
+  </section>
+
+  <!-- NOTICE -->
+  <section class="notice">
+    <div class="notice-line">
+      <div class="bg-left"></div>
+      <div class="bg-right"></div>
+      <div class="inner">
+        <div class="inner__left">
+          <h2>공지사항</h2>
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">a</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">b</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">c</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">d</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">e</a>
+              </div>
+              <div class="swiper-slide">
+                <a href="javascript:void(0)">f</a>
+              </div>
+            </div>
+          </div>
+          <a href="javascript:void(0)" class="notice-line__more">
+            <span class="material-icons">add_circle</span>
+          </a>
+        </div>
+        <div class="inner__right">
+          <h2>스타벅스 프로모션</h2>
+          <div class="toggle-promotion">
+            <div class="material-icons">upload</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="promotion">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide1.jpg" alt="a" />
+            <a href="javascript:void(0)"class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide2.jpg" alt="a" />
+            <a href="javascript:void(0)"class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide3.jpg" alt="a" />
+            <a href="javascript:void(0)"class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide4.jpg" alt="a" />
+            <a href="javascript:void(0)"class="btn">자세히 보기</a>
+          </div>
+          <div class="swiper-slide">
+            <img src="./images/promotion_slide5.jpg" alt="a" />
+            <a href="javascript:void(0)"class="btn">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination">
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+        <span class="swiper-pagination-bullet"></span>
+      </div>
+      <div class="swiper-prev">
+        <span class="material-icons">arrow_back</span>
+      </div>
+      <div class="swiper-next">
+        <span class="material-icons">arrow_forward</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- REWARDS -->
+
+  <!-- YOUTUBE VIDEO -->
+
+  <!-- SEASON PRODUCT -->
+
+  <!-- RESERVE COFFEE -->
+
+  <!-- PICK YOUR FAVORITE -->
+
+  <!-- RESERVE STORE -->
+
+  <!-- FIND THE STORE -->
+
+  <!-- AWARDS -->
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="inner">
+
+      <ul class="menu">
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+        <li><a href="javascript:void(0)"> 개인정보처리방침</a></li>
+      </ul>
+      <div class="btn_group">
+        <a href="javascript:void(0)" class="btn btn--white"> 찾아오시는 길</a>
+        <a href="javascript:void(0)" class="btn btn--white"> 신규입점제의</a>
+        <a href="javascript:void(0)" class="btn btn--white"> 사이트 맵</a>
+      </div>
+      <div class="info">
+        <span>사업자등록번호 201-81-213412</span>
+        <span>(주)스타벅스 코리아 대표이사 되고싶다</span>
+        <span>TEL : 01012E123 </span>
+        <span>개인정보 책임자 : 강기원</span>
+      </div>
+      <p class="copyright">
+        ©<span class="this-year"></span> Coffee Company. All Rights Reserved.
+      </p>
+      <img src="./images/starbucks_logo_only_text.png" alt="a" class="logo">
+   
+    </div>
+  </footer>
+  
+  <!-- TO TOP BUTTON -->
+  <div id="to-top">
+    <div class="material-icons">arrow_upward</div>
+  </div>
+</body>
+</html>
