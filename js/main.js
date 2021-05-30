@@ -87,6 +87,19 @@ new Swiper('.promotion .swiper-container', {
   }
 })
 
+//promotion 토글 기능
+const promotionEl = document.querySelector('.promotion');
+const promotionToggleBtn = document.querySelector('.toggle-promotion');
+let isHidePromotion = false;
+promotionToggleBtn.addEventListener('click', function(){
+  isHidePromotion = !isHidePromotion;
+  if(isHidePromotion){
+    promotionEl.classList.add('hide');
+  }else {
+    promotionEl.classList.remove('hide');
+  }
+})
+
 
 //올해가 몇 년도인지 계산해서 자동으로 업데이트해서 표시
 const thisYear = document.querySelector('.this-year');
